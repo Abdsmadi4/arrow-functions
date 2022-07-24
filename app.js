@@ -8,6 +8,8 @@ const theOldWay = function (course) {
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 console.log('The old way:', theOldWay('Code 301'));
+//The old way: I am currently enrolled in Code 301
+
 
 
 // STEP 2
@@ -19,6 +21,7 @@ const theNewWay = (course) => {
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 console.log('The new way:', theNewWay('Code 301'));
+//The new way: I am currently enrolled in Code 301
 
 
 // STEP 3
@@ -29,6 +32,7 @@ const withoutParens = course => {
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 console.log('Without parens:', withoutParens('Code 301'));
+//Without parens: I am currently enrolled in Code 301
 
 
 // STEP 4
@@ -39,6 +43,7 @@ const oneLiner = course => `I cam currently enrolled in ${course}`;
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 console.log('As a one-liner:', oneLiner('Code 301'));
+//As a one-liner: I cam currently enrolled in Code 301
 
 
 // STEP 5
@@ -50,6 +55,7 @@ const add = function (num1, num2) {
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 console.log('Let\'s do some math:', add(4, 5));
+//Let's do some math: 4 + 5 = 9
 
 
 // STEP 6
@@ -59,6 +65,7 @@ const addOneLiner = (num1, num2) => `${num1} + ${num2} = ${num1 + num2}`;
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 console.log('Add as a one-liner:', addOneLiner(4, 5));
+//Add as a one-liner: 4 + 5 = 9
 
 
 // STEP 7
@@ -71,6 +78,7 @@ const multiLiner = word => {
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 console.log('Multi-line arrow function:', multiLiner('hello'));
+//Multi-line arrow function: HELLO
 
 
 // STEP 8
@@ -86,7 +94,7 @@ const oldObject = function (array) {
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 console.log('Hello from the old object function', oldObject(['hi', 'hello', 'are you there?']));
-
+//Hello from the old object function 
 
 // STEP 9
 // With an arrow function, we need to wrap our object in parentheses
@@ -99,7 +107,7 @@ const newObject = array => ({
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 console.log('Hello from the new object function', newObject(['hi', 'hello', 'are you there?']));
-
+//Hello from the new object function 
 
 // STEP 10
 // Uncomment the console.log lines to view the output of each function in the browser console.
@@ -112,7 +120,7 @@ let sum = (a, b, c, d) => `${a + b + c + d}`;
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 console.log(sum(1, 2, 3, 4));
-
+//10
 
 let objectLit = () =>
 ({
@@ -124,7 +132,11 @@ let objectLit = () =>
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 console.log(objectLit());
-
+// {key1: 'value1', key2: 'value2', key3: 'value3'}
+// key1: "value1"
+// key2: "value2"
+// key3: "value3"
+// [[Prototype]]: Object
 
 let sumAndProduct = (a, b) => {
     let sum = a + b;
@@ -134,13 +146,14 @@ let sumAndProduct = (a, b) => {
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 console.log(sumAndProduct(3, 9));
-
+//[12, 27]
 
 let message = (name) => `Hello, ${name}!`;
 
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 console.log(message('Allie'));
+//Hello, Allie!
 
 
 let Student = function (name, age, hometown) {
@@ -154,6 +167,12 @@ let joe = new Student('Joe Schmoe', 100, 'Anytown, USA');
 // TODO: Uncomment the following line of code to see the output in the browser console
 // Note that the arrow function will cause this code to break!
 console.log(joe);
+//Student {name: 'Joe Schmoe', age: 100, hometown: 'Anytown, USA'}
+// age: 100
+// hometown: "Anytown, USA"
+// name: "Joe Schmoe"
+// [[Prototype]]: Object
+
 
 // TODO: After viewing the previous console.log(), return the code to a working state.
 
@@ -167,6 +186,10 @@ Student.prototype.greeting = function() {
 // TODO: Uncomment the following line of code to see the output in the browser console
 // Note that the arrow function will cause this method  to break!
  console.log(joe.greeting());
+//Hi, my name is Joe Schmoe
+
+
+
 
 // TODO: After viewing the previous console.log(), return the code to a working state.
 
@@ -177,6 +200,7 @@ Student.courseName = () => 'This student is enrolled in Code 301.' ;
 
 // TODO: Uncomment the following line of code to see the output in the browser console
  console.log(Student.courseName());
+//This student is enrolled in Code 301.
 
 
 
@@ -188,11 +212,21 @@ Student.prototype.scope = function () {
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 joe.scope();
+//Student {name: 'Joe Schmoe', age: 100, hometown: 'Anytown, USA'}
+// age: 100
+// hometown: "Anytown, USA"
+// name: "Joe Schmoe"
+// [[Prototype]]: Object
+
+
 
 Student.prototype.scopeArrow = () => console.log(this);
 
 // TODO: Uncomment the following line of code to see the output in the browser console
  joe.scopeArrow();
+//Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+
+
 
 // TODO: Write a COMMENT below to answer the following questions.
 // 1. What is "this" when joe.scope() is invoked?
